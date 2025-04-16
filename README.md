@@ -19,7 +19,7 @@ if you are running the program in bitvise SSH the make file will be easier to us
 
 TESTING METHODOLOGY: 
 in order to compile and get the program to run all files must be downloaded, if using bitvise SSH the makefile will be used, in order to use the makefile go to its location with all the other files, type "make" and it will compile, to run either the C or C++ type "make run" for the C++ and "make run1" for C
-if you are not using bitvisew SSH, please note the Make file will not compile properly. instead, find the location to which you have saved the files and open that location in comand prompt, run the command "g++  -Wall  Matrixplus.cpp C++Test.cpp -o C++Test" then type "C++Test" this will run then compile the C++ program. for the C program run "gcc -std=c99  Matrix.c  CTest.c -o C++Test" to compile and then "CTest" to run.
+if you are not using bitvisew SSH, please note the Make file will not compile properly. instead, find the location to which you have saved the files and open that location in comand prompt, run the command "g++  -Wall  Matrixplus.cpp C++Test.cpp -o C++Test" then type "C++Test" this will run then compile the C++ program. for the C program run "gcc -std=c99  Matrix.c  CTest.c -o CTest" to compile and then "CTest" to run.
 
 ADDITIONAL INFORMATION:
 if you would like to know further details on each finction themselves their are comments on them in each file
