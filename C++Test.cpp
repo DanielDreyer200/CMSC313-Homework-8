@@ -5,15 +5,20 @@
 //lets namespace std be used throughout the program
 using namespace std;
 
+
+
+
 //main function
 int main(){
 
 
   //creates values for the matrix for each idividual matrix
-  int A_values[2][2]{{6,4},{8,3}};
-  int B_values[2][3]{{1,2,3},{4,5,6}};
-  int C_values[2][3]{{2,4,6},{1,3,5}};
-
+  //note that the values are placed in order differently then the C program, they are placed from left to right as they appear in the matrix
+  int A_values[]= {6,4,8,3};
+  int B_values[]= {1,2,3,4,5,6};
+  int C_values[]= {2,4,6,1,3,5};
+  
+  
   //places the values in the matrix itself
   Matrixplus A(2,2,A_values);
   Matrixplus B(2,3,B_values);

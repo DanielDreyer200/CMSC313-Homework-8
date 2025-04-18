@@ -10,15 +10,15 @@ Matrixplus.o: Matrixplus.h Matrixplus.cpp
 	$(CXX) $(CXXFLAGS) -c Matrixplus.cpp
 
 CTest: Matrix.o CTest.c
-	gcc  -std=c99 Matrix.o CTest.c -o  CTest
+	gcc  -std=c99 -m32 -o0 Matrix.o CTest.c -o  CTest
 
 Matrix.o: Matrix.h Matrix.c
-	gcc -c  -std=c99 Matrix.c
+	gcc -std=c99  Matrix.c
 
 run:
 	./C++Test
 
-run1:
+yrun1:
 	./CTest
 
 clean:

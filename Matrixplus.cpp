@@ -24,9 +24,11 @@ Matrixplus::Matrixplus(int rows, int cols) {
 
 }
 
-//constructs a matrix with rows and columns and the 2D rray's columns is set to 2
-Matrixplus::Matrixplus(int rows, int cols, int values[][2]){
 
+
+//constructs a matrix with rows and columns and the an array, creating a 2D array matrix 
+Matrixplus::Matrixplus(int rows, int cols, int* values){
+  
   //sets rows  and columns based on given values
   setRow(rows);
   setCol(cols);
@@ -34,13 +36,13 @@ Matrixplus::Matrixplus(int rows, int cols, int values[][2]){
   //sets data to be an array
   data = new int*[row];
 
-  //double for loop loops throough the intire array setting the value to the position in data creating its matrix
+  //double for-loop's loops throough the intire array setting the value to the position in data creating its matrix, not that by x (row number) multiplied by number of colums and adding y (column number) we get the position of each value
   for(int x=0;x< row; x++){
 
     data[x] = new int[col];
     for(int y=0; y< col; y++){
 
-      data[x][y]= values[x][y];
+      data[x][y]= values[x * cols + y];
 
 
 
@@ -51,32 +53,7 @@ Matrixplus::Matrixplus(int rows, int cols, int values[][2]){
 
 }
 
-//constructs a matrix with rows and columns and the 2D rray's columns is set to 3
-Matrixplus::Matrixplus(int rows, int cols, int values[][3]){
 
-  //sets rows  and columns based on given values
-  setRow(rows);
-  setCol(cols);
-
-  //sets data to be an array
-  data = new int*[row];
-
-  //double for loop loops throough the intire array setting the value to the position in data creating its matrix
-  for(int x=0;x< row; x++){
-
-    data[x] = new int[col];
-    for(int y=0; y< col; y++){
-
-      data[x][y]= values[x][y];
-
-      
-
-    }
-
-  }
-
-
-}
 
 //destructor, breaks apart each value in a matrix at the end, right before the program ends
 Matrixplus::~Matrixplus(){

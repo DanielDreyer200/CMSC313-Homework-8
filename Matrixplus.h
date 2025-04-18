@@ -6,6 +6,8 @@
 using namespace std;
 
 //class name
+
+
 class Matrixplus{
 
   //public functions to be used by .cpp
@@ -14,11 +16,8 @@ class Matrixplus{
   //default constructor
   Matrixplus(int row, int col);
 
-  //constructor for the 2x2 matrix
-  Matrixplus(int row, int col, int value[][2]);
-
-  //constructor for the 2x3 matrix
-  Matrixplus(int row, int col, int value[][3]);
+  //constructor for a matrix
+  Matrixplus(int row, int col, int* value);
 
   //destructor
   ~Matrixplus();
@@ -51,7 +50,7 @@ class Matrixplus{
 
   int row;
 
-  int col;
+  int col = 0;
 
 };
 //ends guard
